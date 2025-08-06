@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+
+xr2rml/mongo_db/*
+xr2rml/log/*
+xr2rml/output/*
+
+Competency_questions/*
+
+input/powo/raw/*
+input/powo/currated/*
