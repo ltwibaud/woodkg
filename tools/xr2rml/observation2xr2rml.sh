@@ -3,8 +3,8 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
-rm -rf "$PROJECT_ROOT/xr2rml/mongo_import"/*
-rm -rf "$PROJECT_ROOT/xr2rml/xr2rml_config/mapping*.ttl"
+rm -rf "$PROJECT_ROOT/xr2rml/mongo_import/"*.json
+rm -rf "$PROJECT_ROOT/xr2rml/xr2rml_config/"mapping*.ttl
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -23,7 +23,8 @@ while [[ $# -gt 0 ]]; do
                 echo "Traitement du fichier $FILE_NUMBER : $(basename "$FILE")"
 
                 # Nettoyer mongo_import et copier le fichier courant
-                rm -rf "$PROJECT_ROOT/xr2rml/mongo_import"/*
+                rm -rf "$PROJECT_ROOT/xr2rml/mongo_import/"*.json
+            
                 cp "$FILE" "$PROJECT_ROOT/xr2rml/mongo_import/"
 
                 # Appel du script avec -taxon -<numéro>

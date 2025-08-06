@@ -1,11 +1,16 @@
 __pycache__/
 *.pyc
 *.pyo
+*.zip
+*.xml
+
+wcvp_*
 
 xr2rml/mongo_db/*
 xr2rml/log/*
-xr2rml/output/*
+xr2rml/xr2rml_output/*
 
+output/*.ttl
 Competency_questions/*
 
 input/powo/raw/*
