@@ -38,7 +38,8 @@ while [[ $# -gt 0 ]]; do
             ;;
         -thesaurus)
             cp "$PROJECT_ROOT/tools/iawa_thesaurus/mapping/mapping_thesaurus_iawa.ttl" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
-            cp "$PROJECT_ROOT/input/iawa_thesaurus/currated/iawa_thesaurus.json" "$PROJECT_ROOT/xr2rml/mongo_import"
+            echo "j'ai tout bien fait"
+            cp "$PROJECT_ROOT/input/iawa_thesaurus/currated/iawa_thesaurus.json" "$PROJECT_ROOT/xr2rml/mongo_db/"
 
             bash "$SCRIPT_DIR/xr2rml.sh" -thesaurus
             cp "$PROJECT_ROOT/xr2rml/xr2rml_output/thesaurus.ttl" "$PROJECT_ROOT/output/"

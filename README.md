@@ -27,11 +27,11 @@ Téléchargez les données taxonomiques du WCVP à l’adresse suivante :
 
 https://sftp.kew.org/pub/data-repositories/WCVP/
 
-Téléchargez le fichier `wccp_dwca.zip`, puis extrayez le fichier `wcvp_taxon.csv` au root du projet.
+Téléchargez le fichier `wccp_dwca.zip`, puis extrayez le fichier `wcvp_taxon.csv`.
 
 Découpez ce fichier en sous-fichiers de 100 000 lignes pour faciliter le traitement :
 
-split -l 100000 -d --additional-suffix=.csv wcvp_taxon.csv input/powo/raw/wcvp_part_
+split -l 100000 -d --additional-suffix=.csv wcvp_taxon.csv project_root/input/powo/raw/wcvp_part_
 
 ## Fonctionnalités
 
@@ -110,7 +110,7 @@ Puis dans le menu :
 5 → pour transformer les observations CEPAM  
 7 → et entrer ce chemin :
 
-/home/lyam/Bureau/Stage2A/WoodKGL2/input/cepam_observations/currated/CEPAM_feature_net_taxa_and_numbers_homogene.json
+input/cepam_observations/currated/CEPAM_feature_net_taxa_and_numbers_homogene.json
 
 ## Technologies utilisées
 
